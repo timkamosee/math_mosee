@@ -44,11 +44,17 @@ inline int dic(calc* str){
     return 0;
 }
 
+
+
+
+
+
+
 inline int exp(calc* str){
     str->result = str->a;
     bool errcod = false;
     for(int i = 1; i < str-> b && !errcod; i++){
-        errcod = mosee_mul(str->result, str->a, &str->result);
+        errcod = mul(str->result, str->a, &str->result);
     }
     if(errcod)str->err = 4;
     return 0;
