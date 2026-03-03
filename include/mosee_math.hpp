@@ -13,7 +13,7 @@ struct calc {
     long long b;
     char operation;
     int err = 0;      //1 - incorrect input      4 - переполнение после вычсления 
-    long long result; //2 - Переполнение типа
+    long long result; //2 - Переполнение типа    5 - вызов справки
 };                    //3 - деление на 0
 
 #endif
@@ -58,7 +58,7 @@ inline long long fac(long long n, int* errcod){
     if (n <= 1) return (long long)1;
     long long result;
     if(mul(n, fac(n - 1, errcod), &result)) {
-        *errcod = 4
+        *errcod = 4;
         return 0}; 
     return result;
 }
