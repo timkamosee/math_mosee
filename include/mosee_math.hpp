@@ -59,7 +59,8 @@ inline long long fac(long long n, int* errcod){
     long long result;
     if(mul(n, fac(n - 1, errcod), &result)) {
         *errcod = 4;
-        return 0}; 
+        return 0;
+    }
     return result;
 }
 }
