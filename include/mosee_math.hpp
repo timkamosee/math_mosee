@@ -12,7 +12,7 @@ struct calc {
     long long a;
     long long b;
     char operation;
-    int err = 0;      //1 - incorrect input      4 - переполнение после выисления 
+    int err = 0;      //1 - incorrect input      4 - переполнение после вычсления 
     long long result; //2 - Переполнение типа
 };                    //3 - деление на 0
 
@@ -44,12 +44,6 @@ inline int dic(calc* str){
     return 0;
 }
 
-
-
-
-
-
-
 inline int exp(calc* str){
     str->result = str->a;
     bool errcod = false;
@@ -63,7 +57,9 @@ inline int exp(calc* str){
 inline long long fac(long long n, int* errcod){
     if (n <= 1) return (long long)1;
     long long result;
-    if(mul(n, fac(n - 1, errcod), &result)) *errcod = 4; 
+    if(mul(n, fac(n - 1, errcod), &result)) {
+        *errcod = 4
+        return 0}; 
     return result;
 }
 }
