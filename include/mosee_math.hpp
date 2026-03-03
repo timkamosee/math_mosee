@@ -51,7 +51,7 @@ inline int exp(calc* str){
         errcod = mul(str->result, str->a, &str->result);
     }
     if(errcod)str->err = 4;
-    if(str->a == 0 && str-b == 0) str->result = 1;
+    if(str->a == 0 && str->b == 0) str->result = 1;
     return 0;
 }
 
