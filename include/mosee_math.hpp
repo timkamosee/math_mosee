@@ -1,22 +1,11 @@
 #pragma once
-
+#include<calc.hpp>
 /* 
    Header-only библиотека.
    Все функции inline, чтобы избежать multiple definition.
 */
 
-#ifndef CALC_STRUCT_DEFINED
-#define CALC_STRUCT_DEFINED
 
-struct calc {
-    long long a;
-    long long b;
-    char operation = 0;
-    int err = 0;      //1 - incorrect input      4 - переполнение после вычсления 
-    long long result; //2 - Переполнение типа    5 - вызов справки
-};                    //3 - деление на 0
-
-#endif
 
 namespace math_mosee {
 
